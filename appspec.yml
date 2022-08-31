@@ -5,14 +5,14 @@ files:
     destination: /usr/local/tomcat/webapps
 hooks:
   BeforeInstall:
-    - location: before_install.sh
+    - location: scripts/before_install.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: after_install.sh
+    - location: scripts/after_install.sh
       timeout: 300
       runas: root
   ValidateService:
-    - location: validate.sh
+    - location: scripts/validate.sh
       timeout: 300
       runas: root
