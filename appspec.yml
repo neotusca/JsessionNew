@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /usr/local/tomcat/webapps
+    destination: /usr/local/tomcat/deploy
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
