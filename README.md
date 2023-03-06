@@ -8,7 +8,7 @@
 
 - for gradle
   - gradle build --> build/libs/JsessionNew-1.0-SNAPSHOT.war
-  - cp build/libs/JsessionNew-1.0-SNAPSHOT.war <WAS_WEBAPP_DIR> --> automatically extract
+  - cp build/libs/JsessionNew-1.0-SNAPSHOT.war <WAS_WEBAPP_DIR>/JsessionNew.war --> automatically extract
 
 ### for test
 - curl localhost:8080/JsessionNew/
