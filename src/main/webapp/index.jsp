@@ -15,7 +15,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Session Test</title>
+<title>Session Test - CICD</title>
 </head>
 <body>
 <h3 class="message"><%=JsessionNew.getMessage()%></h3>
