@@ -11,19 +11,6 @@
         long lastAccessedTime = session.getLastAccessedTime();
         int maxInactiveInterval = session.getMaxInactiveInterval();
         Enumeration e = session.getAttributeNames();
-
-        // 클라이언트(요청) 도메인명 및 IP
-        String clientIp = request.getHeader("X-Forwarded-For");
-        if (clientIp == null || clientIp.isEmpty()) {
-            clientIp = request.getRemoteAddr();
-        } else {
-            clientIp = clientIp.split(",")[0].trim();
-        }
-        String clientDomain = request.getServerName();
-        int clientPort = request.getServerPort();
-        String requestUrl = request.getScheme() + "://" + clientDomain
-                            + (clientPort == 80 || clientPort == 443 ? "" : ":" + clientPort)
-                            + request.getRequestURI();
 %>
 <html>
 <head>
@@ -46,26 +33,6 @@
                 <td>Server IP</td>
                 <td><%=java.net.InetAddress.getLocalHost()
                                                                         .getHostAddress()%></td>
-        </tr>
-        <tr bgcolor="lightblue">
-                <td colspan=2 align="center"><font color="white"><b>Request
-                Info</b></font></td>
-        </tr>
-        <tr>
-                <td>Service Domain</td>
-                <td><%=clientDomain%></td>
-        </tr>
-        <tr>
-                <td>Service Port</td>
-                <td><%=clientPort%></td>
-        </tr>
-        <tr>
-                <td>Request URL</td>
-                <td><%=requestUrl%></td>
-        </tr>
-        <tr>
-                <td>Client IP</td>
-                <td><%=clientIp%></td>
         </tr>
         <tr>
                 <td>Request SessionID</td>
@@ -122,4 +89,3 @@
         %>
 </body>
 </html>
-
