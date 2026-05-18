@@ -13,4 +13,4 @@
 ### for test
 - curl localhost:8080/JsessionNew/
 - <screenshot>
-  (figures/screenshot.png)
+  [!main screenshot](figures/screenshot.png)
