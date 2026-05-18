@@ -12,5 +12,4 @@
 
 ### for test
 - curl localhost:8080/JsessionNew/
-- <screenshot>
-  [!main screenshot](figures/screenshot.png)
+![screenshot](figures/screenshot.png)
